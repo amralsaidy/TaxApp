@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">SunDatePicker</string>
+    <string name="ok_btn">Ok</string>
+    <string name="cancel_btn">Cancel</string>
+    <string name="today">Today</string>
+    <string name="date_placeholder">"%s، %d %s"</string>
+</resources>

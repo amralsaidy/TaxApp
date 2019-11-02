@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools" tools:ignore="MissingTranslation">
+    <string-array name="en_week_days_shortcut">
+        <item>Sat</item>
+        <item>Sun</item>
+        <item>Mon</item>
+        <item>Tus</item>
+        <item>Wed</item>
+        <item>Thu</item>
+        <item>Fri</item>
+    </string-array>
+
+
+    <string-array name="en_week_days">
+        <item> Saturday </item>
+        <item> Sunday </item>
+        <item> Monday </item>
+        <item> Tuesday </item>
+        <item> Wednesday </item>
+        <item> Thursday </item>
+        <item> Friday </item>
+    </string-array>
+
+    <string-array name="en_months">
+        <item> January </item>
+        <item> February </item>
+        <item> March </item>
+        <item> April </item>
+        <item> May </item>
+        <item> June </item>
+        <item> July </item>
+        <item> August </item>
+        <item> September </item>
+        <item> October </item>
+        <item> November </item>
+        <item> December </item>
+    </string-array>
+
+    <string-array name="ar_week_days_shortcut">
+        <item>س</item>
+        <item>ح</item>
+        <item>ن</item>
+        <item>ث</item>
+        <item>ر</item>
+        <item>خ</item>
+        <item>ج</item>
+    </string-array>
+
+
+    <string-array name="ar_week_days">
+        <item>السبت</item>
+        <item>الأحد</item>
+        <item>الأثنين</item>
+        <item>الثلاثاء</item>
+        <item>الأربعاء</item>
+        <item>الخميس</item>
+        <item>الجمعة</item>
+    </string-array>
+
+    <string-array name="ar_months">
+        <item>يناير</item>
+        <item>فبراير</item>
+        <item>مارس</item>
+        <item>أبريل</item>
+        <item>مايو</item>
+        <item>يونيو</item>
+        <item>يوليو</item>
+        <item>أغسطس</item>
+        <item>سبتمبر</item>
+        <item>اكتوبر</item>
+        <item>نوفمبر</item>
+        <item>ديسمبر</item>
+    </string-array>
+</resources>

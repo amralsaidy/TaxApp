@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.datepicker.components.SquareTextView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/item_background"
+    android:gravity="center"
+    android:padding="@dimen/day_padding"
+    android:scaleX="-1"
+    android:textSize="@dimen/text_small"
+    app:backgroundTint="?attr/colorPrimary"
+    tools:text="13" />

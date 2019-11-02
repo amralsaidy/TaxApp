@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="year_width">80dp</dimen>
+    <dimen name="year_padding">5dp</dimen>
+    <dimen name="day_padding">2dp</dimen>
+    <dimen name="dialog_padding">16dp</dimen>
+    <dimen name="dialog_width">260dp</dimen>
+    <dimen name="dialog_height">430dp</dimen>
+    <dimen name="list_padding">12dp</dimen>
+    <dimen name="title_padding">12dp</dimen>
+    <dimen name="month_padding_left">16dp</dimen>
+    <dimen name="month_padding_right">16dp</dimen>
+</resources>

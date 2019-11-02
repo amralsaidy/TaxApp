@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/bg_dialog">
+
+    <!--<TextView-->
+        <!--android:id="@+id/message_tv_id"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent"-->
+        <!--android:layout_margin="20dp"-->
+        <!--android:layout_above="@id/ok_tv_id"-->
+        <!--android:layout_below="@id/date"-->
+        <!--android:text="meassage"-->
+        <!--android:textSize="16sp"-->
+        <!--android:textColor="@color/md_red_A700"/>-->
+
+    <!--<View-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="2dp"-->
+        <!--android:layout_below="@id/message_tv_id"-->
+        <!--android:background="@drawable/dialog_shadow" />-->
+
+    <!--<TextView-->
+        <!--android:id="@+id/ok_tv_id"-->
+        <!--style="@style/PrimaryButtonStyle"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_alignParentStart="true"-->
+        <!--android:layout_alignParentBottom="true"-->
+        <!--android:layout_marginStart="10dp"-->
+        <!--android:text="OK"-->
+        <!--android:textSize="18sp"-->
+        <!--android:textColor="@color/md_blue_A700"/>-->
+</RelativeLayout>

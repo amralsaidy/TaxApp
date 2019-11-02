@@ -1,0 +1,805 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginStart="10dp"
+    android:layout_marginEnd="10dp"
+    android:background="@color/md_white_1000"
+    android:layoutDirection="rtl"
+    android:orientation="vertical">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="5dp"
+        android:layout_weight=".1"
+        android:orientation="horizontal">
+
+        <com.asb.taxapp.CTextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.5"
+            android:gravity="start|center"
+            android:text="حدد السنة"
+            android:textColor="@color/md_black_1000"
+            android:textSize="@dimen/label_text_size" />
+
+        <com.asb.taxapp.CTextView
+            android:id="@+id/years_tv_id"
+            android:layout_width="0dp"
+            android:layout_height="35dp"
+            android:layout_gravity="center"
+            android:layout_weight="0.5"
+            android:background="@drawable/bg_edit_text"
+            android:gravity="center"
+            android:text="2005"
+            android:textColor="@color/md_black_1000"
+            android:textSize="@dimen/label_text_size" />
+
+        <View
+            android:layout_width="56dp"
+            android:layout_height="match_parent" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_weight=".1">
+
+        <com.asb.taxapp.CTextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.5"
+            android:gravity="start|center"
+            android:text="صافى الربح"
+            android:textColor="@color/md_black_1000"
+            android:textSize="@dimen/label_text_size" />
+
+        <com.asb.taxapp.CEditText
+            android:id="@+id/value_et_id"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.5"
+            android:background="@drawable/bg_edit_text"
+            android:gravity="center"
+            android:hint="صافى الربح"
+            android:inputType="numberDecimal"
+            android:maxLength="8"
+            android:textColor="@color/md_black_1000"
+            android:textColorHint="@color/md_grey_400"
+            android:textDirection="ltr"
+            android:textSize="@dimen/label_text_size" />
+
+        <ImageView
+            android:id="@+id/calculator_iv_id"
+            android:layout_width="56dp"
+            android:layout_height="match_parent"
+            android:padding="8dp"
+            android:src="@drawable/ic_calculator" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_weight=".1"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <com.asb.taxapp.CTextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.2"
+            android:text="من"
+            android:textColor="@color/md_black_1000"
+            android:textSize="@dimen/label_text_size" />
+
+        <com.asb.taxapp.CTextView
+            android:id="@+id/start_date_tv_id"
+            android:layout_width="0dp"
+            android:layout_height="25dp"
+            android:layout_marginStart="5dp"
+            android:layout_weight="0.5"
+            android:background="@color/md_light_blue_50"
+            android:gravity="center"
+            android:text="2018-1-1"
+            android:textColor="@color/md_black_1000" />
+
+        <com.asb.taxapp.CTextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_weight="0.2"
+            android:text="إلى"
+            android:textColor="@color/md_black_1000"
+            android:textSize="@dimen/label_text_size" />
+
+        <com.asb.taxapp.CTextView
+            android:id="@+id/end_date_tv_id"
+            android:layout_width="0dp"
+            android:layout_height="25dp"
+            android:layout_marginStart="10dp"
+            android:layout_weight="0.5"
+            android:background="@color/md_light_blue_50"
+            android:gravity="center"
+            android:text="2018-12-31"
+            android:textColor="@color/md_black_1000" />
+
+        <com.asb.taxapp.CTextView
+            android:id="@+id/date_ratio_tv_id"
+            android:layout_width="0dp"
+            android:layout_height="25dp"
+            android:layout_marginStart="10dp"
+            android:layout_weight="0.2"
+            android:background="@color/md_light_blue_50"
+            android:gravity="center"
+            android:text="1.0"
+            android:textColor="@color/md_black_1000" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_weight=".1"
+        android:orientation="horizontal">
+
+        <com.asb.taxapp.CTextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.5"
+            android:gravity="start|center"
+            android:text="مايخص الفترة"
+            android:textColor="@color/md_black_1000"
+            android:textSize="@dimen/label_text_size" />
+
+        <com.asb.taxapp.CTextView
+            android:id="@+id/period_tv_id"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.5"
+            android:background="@drawable/bg_edit_text"
+            android:gravity="center"
+            android:hint="مايخص الفترة"
+            android:textColor="@color/md_black_1000"
+            android:textColorHint="@color/md_grey_400"
+            android:textSize="@dimen/label_text_size" />
+
+        <View
+            android:layout_width="56dp"
+            android:layout_height="match_parent" />
+    </LinearLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="10dp"
+        android:layout_weight=".08">
+
+        <com.asb.taxapp.CTextView
+            android:id="@+id/calculate_tax_tv_id"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:background="@drawable/bg_button"
+            android:gravity="center"
+            android:paddingStart="15dp"
+            android:paddingEnd="15dp"
+            android:text="احسب الضريبة"
+            android:textColor="@color/md_cyan_A700"
+            android:textSize="@dimen/label_text_size" />
+
+
+        <LinearLayout
+            android:id="@+id/without_ll_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end|center"
+            android:layout_marginEnd="5dp">
+
+            <CheckBox
+                android:id="@+id/without_cb_id"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:buttonTint="@color/md_black_1000" />
+
+            <com.asb.taxapp.CTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="بدون أعباء"
+                android:textColor="@color/md_black_1000"
+                android:textSize="@dimen/extra_text_size" />
+
+        </LinearLayout>
+    </FrameLayout>
+
+    <LinearLayout
+        android:id="@+id/details_ll_id"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight=".5"
+        android:orientation="vertical"
+        android:visibility="visible">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <com.asb.taxapp.CTextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="0.7"
+                android:background="@color/md_cyan_A700"
+                android:text="شريحة"
+                android:textAlignment="center"
+                android:textColor="@color/md_white_1000" />
+
+            <com.asb.taxapp.CTextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1.6"
+                android:background="@color/md_cyan_A700"
+                android:text="مدى الشريحة"
+                android:textAlignment="center"
+                android:textColor="@color/md_white_1000" />
+
+
+            <com.asb.taxapp.CTextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1.1"
+                android:background="@color/md_cyan_A700"
+                android:text="القيمة"
+                android:textAlignment="center"
+                android:textColor="@color/md_white_1000" />
+
+
+            <com.asb.taxapp.CTextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="0.6"
+                android:background="@color/md_cyan_A700"
+                android:text="%"
+                android:textAlignment="center"
+                android:textColor="@color/md_white_1000" />
+
+
+            <com.asb.taxapp.CTextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:background="@color/md_cyan_A700"
+                android:text="الضريبة"
+                android:textAlignment="center"
+                android:textColor="@color/md_white_1000" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <com.asb.taxapp.CTextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_weight="0.7"
+                android:background="@drawable/bg_cell"
+                android:gravity="center"
+                android:text="معفاه"
+                android:textColor="@color/md_black_1000"
+                android:textSize="@dimen/extra_text_size" />
+
+            <com.asb.taxapp.CTextView
+                android:id="@+id/sec0_tv_id"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_weight="1.6"
+                android:background="@drawable/bg_cell"
+                android:gravity="center"
+                android:textColor="@color/md_black_1000"
+                android:textSize="@dimen/cell_text_size" />
+
+            <com.asb.taxapp.CTextView
+                android:id="@+id/sh0_tv_id"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_weight="1.1"
+                android:background="@drawable/bg_cell"
+                android:gravity="center"
+                android:textColor="@color/md_black_1000"
+                android:textSize="@dimen/cell_text_size" />
+
+
+            <com.asb.taxapp.CTextView
+                android:id="@+id/per0_tv_id"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_weight="0.6"
+                android:background="@drawable/bg_cell"
+                android:gravity="center"
+                android:textColor="@color/md_black_1000"
+                android:textSize="@dimen/cell_text_size" />
+
+
+            <com.asb.taxapp.CTextView
+                android:id="@+id/result0_tv_id"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:background="@drawable/bg_cell"
+                android:gravity="center"
+                android:textColor="@color/md_black_1000"
+                android:textSize="@dimen/cell_text_size" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <com.asb.taxapp.CTextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_weight="0.7"
+                android:background="@drawable/bg_cell"
+                android:gravity="center"
+                android:text="ثانية"
+                android:textColor="@color/md_black_1000"
+                android:textSize="@dimen/extra_text_size" />
+
+
+            <com.asb.taxapp.CTextView
+                android:id="@+id/sec1_tv_id"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_weight="1.6"
+                android:background="@drawable/bg_cell"
+                android:gravity="center"
+                android:textColor="@color/md_black_1000"
+                android:textSize="@dimen/cell_text_size" />
+
+            <com.asb.taxapp.CTextView
+                android:id="@+id/sh1_tv_id"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_weight="1.1"
+                android:background="@drawable/bg_cell"
+                android:gravity="center"
+                android:textColor="@color/md_black_1000"
+                android:textSize="@dimen/cell_text_size" />
+
+
+            <com.asb.taxapp.CTextView
+                android:id="@+id/per1_tv_id"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_weight="0.6"
+                android:background="@drawable/bg_cell"
+                android:gravity="center"
+                android:textColor="@color/md_black_1000"
+                android:textSize="@dimen/cell_text_size" />
+
+            <com.asb.taxapp.CTextView
+                android:id="@+id/result1_tv_id"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:background="@drawable/bg_cell"
+                android:gravity="center"
+                android:textColor="@color/md_black_1000"
+                android:textSize="@dimen/cell_text_size" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <com.asb.taxapp.CTextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_weight="0.7"
+                android:background="@drawable/bg_cell"
+                android:gravity="center"
+                android:text="ثالثة"
+                android:textColor="@color/md_black_1000"
+                android:textSize="@dimen/extra_text_size" />
+
+            <com.asb.taxapp.CTextView
+                android:id="@+id/sec2_tv_id"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_weight="1.6"
+                android:background="@drawable/bg_cell"
+                android:gravity="center"
+                android:textColor="@color/md_black_1000"
+                android:textSize="@dimen/cell_text_size" />
+
+            <com.asb.taxapp.CTextView
+                android:id="@+id/sh2_tv_id"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_weight="1.1"
+                android:background="@drawable/bg_cell"
+                android:gravity="center"
+                android:textColor="@color/md_black_1000"
+                android:textSize="@dimen/cell_text_size" />
+
+            <com.asb.taxapp.CTextView
+                android:id="@+id/per2_tv_id"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_weight="0.6"
+                android:background="@drawable/bg_cell"
+                android:gravity="center"
+                android:textColor="@color/md_black_1000"
+                android:textSize="@dimen/cell_text_size" />
+
+            <com.asb.taxapp.CTextView
+                android:id="@+id/result2_tv_id"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:background="@drawable/bg_cell"
+                android:gravity="center"
+                android:textColor="@color/md_black_1000"
+                android:textSize="@dimen/cell_text_size" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <com.asb.taxapp.CTextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_weight="0.7"
+                android:background="@drawable/bg_cell"
+                android:gravity="center"
+                android:text="رابعة"
+                android:textColor="@color/md_black_1000"
+                android:textSize="@dimen/extra_text_size" />
+
+            <com.asb.taxapp.CTextView
+                android:id="@+id/sec3_tv_id"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_weight="1.6"
+                android:background="@drawable/bg_cell"
+                android:gravity="center"
+                android:textColor="@color/md_black_1000"
+                android:textSize="@dimen/cell_text_size" />
+
+            <com.asb.taxapp.CTextView
+                android:id="@+id/sh3_tv_id"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_weight="1.1"
+                android:background="@drawable/bg_cell"
+                android:gravity="center"
+                android:textColor="@color/md_black_1000"
+                android:textSize="@dimen/cell_text_size" />
+
+            <com.asb.taxapp.CTextView
+                android:id="@+id/per3_tv_id"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_weight="0.6"
+                android:background="@drawable/bg_cell"
+                android:gravity="center"
+                android:textColor="@color/md_black_1000"
+                android:textSize="@dimen/cell_text_size" />
+
+            <com.asb.taxapp.CTextView
+                android:id="@+id/result3_tv_id"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:background="@drawable/bg_cell"
+                android:gravity="center"
+                android:textColor="@color/md_black_1000"
+                android:textSize="@dimen/cell_text_size" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <com.asb.taxapp.CTextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_weight="0.7"
+                android:background="@drawable/bg_cell"
+                android:gravity="center"
+                android:text="خامسة"
+                android:textColor="@color/md_black_1000"
+                android:textSize="@dimen/extra_text_size" />
+
+            <com.asb.taxapp.CTextView
+                android:id="@+id/sec4_tv_id"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_weight="1.6"
+                android:background="@drawable/bg_cell"
+                android:gravity="center"
+                android:textColor="@color/md_black_1000"
+                android:textSize="@dimen/cell_text_size" />
+
+            <com.asb.taxapp.CTextView
+                android:id="@+id/sh4_tv_id"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_weight="1.1"
+                android:background="@drawable/bg_cell"
+                android:gravity="center"
+                android:textColor="@color/md_black_1000"
+                android:textSize="@dimen/cell_text_size" />
+
+            <com.asb.taxapp.CTextView
+                android:id="@+id/per4_tv_id"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_weight="0.6"
+                android:background="@drawable/bg_cell"
+                android:gravity="center"
+                android:textColor="@color/md_black_1000"
+                android:textSize="@dimen/cell_text_size" />
+
+            <com.asb.taxapp.CTextView
+                android:id="@+id/result4_tv_id"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:background="@drawable/bg_cell"
+                android:gravity="center"
+                android:textColor="@color/md_black_1000"
+                android:textSize="@dimen/cell_text_size" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/tax_fl_id"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="10dp"
+        android:layout_weight=".1"
+        android:visibility="visible">
+
+        <LinearLayout
+            android:id="@+id/discount_ll_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start|center"
+            android:visibility="visible">
+
+            <CheckBox
+                android:id="@+id/discount_cb_id"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:buttonTint="@color/md_black_1000" />
+
+            <com.asb.taxapp.CTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="بالخصم"
+                android:textColor="@color/md_black_1000"
+                android:textSize="@dimen/extra_text_size" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/extra_ll_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start|center"
+            android:visibility="gone">
+
+            <CheckBox
+                android:id="@+id/extra_cb_id"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:buttonTint="@color/md_black_1000" />
+
+            <com.asb.taxapp.CTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="ض اضافية"
+                android:textColor="@color/md_black_1000"
+                android:textSize="@dimen/extra_text_size" />
+
+        </LinearLayout>
+
+        <com.asb.taxapp.CTextView
+            android:id="@+id/result_tax_tv_id"
+            android:layout_width="120dp"
+            android:layout_height="35dp"
+            android:layout_gravity="center"
+            android:background="@color/md_light_blue_50"
+            android:gravity="center"
+            android:text="0"
+            android:textAlignment="center"
+            android:textColor="@color/md_black_1000"
+            android:textSize="@dimen/num_text_size" />
+
+        <com.asb.taxapp.CTextView
+            android:id="@+id/discount_tax_tv_id"
+            android:layout_width="100dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="end"
+            android:gravity="center"
+            android:textAlignment="center"
+            android:textColor="@color/md_red_500"
+            android:textSize="@dimen/extra_text_size"
+            tools:visibility="visible" />
+
+        <com.asb.taxapp.CTextView
+            android:id="@+id/extra_tax_tv_id"
+            android:layout_width="100dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="end"
+            android:gravity="center"
+            android:textAlignment="center"
+            android:textColor="@color/md_red_500"
+            android:textSize="@dimen/extra_text_size"
+            tools:visibility="gone" />
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/tax_ratio_fl_id"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="20dp"
+        android:layout_weight=".1"
+        android:visibility="gone">
+
+        <com.asb.taxapp.CTextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="start|center"
+            android:text="نسبة الضريبة"
+            android:textColor="@color/md_black_1000"
+            android:textSize="@dimen/label_text_size" />
+
+        <com.asb.taxapp.CTextView
+            android:id="@+id/tax_ratio_tv_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="@color/md_light_blue_50"
+            android:gravity="center"
+            android:paddingStart="10dp"
+            android:paddingEnd="10dp"
+            android:text="20 %"
+            android:textColor="@color/md_black_1000"
+            android:textColorHint="@color/md_grey_400"
+            android:textSize="@dimen/num_text_size" />
+
+        <View
+            android:layout_width="100dp"
+            android:layout_height="match_parent" />
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/tax2_fl_id"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_weight=".1"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:id="@+id/extra2_ll_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start|center"
+            android:visibility="gone">
+
+            <CheckBox
+                android:id="@+id/extra2_cb_id"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:buttonTint="@color/md_black_1000" />
+
+            <com.asb.taxapp.CTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="ض اضافية"
+                android:textColor="@color/md_black_1000"
+                android:textSize="@dimen/extra_text_size" />
+
+        </LinearLayout>
+
+        <com.asb.taxapp.CTextView
+            android:id="@+id/result2_tax_tv_id"
+            android:layout_width="120dp"
+            android:layout_height="35dp"
+            android:layout_gravity="center"
+            android:background="@color/md_light_blue_50"
+            android:gravity="center"
+            android:text="0"
+            android:textAlignment="center"
+            android:textColor="@color/md_black_1000"
+            android:textSize="@dimen/num_text_size" />
+
+        <com.asb.taxapp.CTextView
+            android:id="@+id/extra2_tax_tv_id"
+            android:layout_width="100dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="end"
+            android:gravity="center"
+            android:textAlignment="center"
+            android:textColor="@color/md_red_500"
+            android:textSize="@dimen/extra_text_size"
+            tools:visibility="gone" />
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/fake_fl_id"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight=".4"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+    </FrameLayout>
+
+</LinearLayout>

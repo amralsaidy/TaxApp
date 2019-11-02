@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:ignore="ContentDescription,UnusedAttribute">
+
+    <com.datepicker.components.SquareImageView
+        android:id="@+id/next"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/title"
+        android:layout_alignBottom="@+id/title"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="@dimen/month_padding_left"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:scaleType="center"
+        android:src="@drawable/ic_navigate_before"
+        app:tint="?android:textColor" />
+
+    <TextView
+        android:id="@+id/title"
+        style="@style/DialogTitle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_toStartOf="@id/before"
+        android:layout_toLeftOf="@id/before"
+        android:layout_toEndOf="@id/next"
+        android:layout_toRightOf="@id/next"
+        android:gravity="center"
+        android:padding="@dimen/title_padding"
+        android:textColor="@color/colorPrimaryDark"
+        tools:text="June" />
+
+    <com.datepicker.components.SquareImageView
+        android:id="@+id/before"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/title"
+        android:layout_alignBottom="@+id/title"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="@dimen/month_padding_right"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:scaleType="center"
+        android:src="@drawable/ic_navigate_next"
+        app:tint="?android:textColor" />
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/pager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/title"
+        android:scaleX="-1" />
+</RelativeLayout>
